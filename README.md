@@ -40,7 +40,7 @@ Image Transport System (FITS) images into mosaics according to
 the user's custom specifications of coordinates, projection,
 spatial sampling and rotation.
 
-The toolkit contains utilities for reprojecting and background
+The Montage toolkit contains utilities for reprojecting and background
 matching images, assembling them into mosaics, visualizing the
 results, and discovering, analyzing and understanding image metadata
 from archives or the user's images.
@@ -52,7 +52,7 @@ the same functionality in library form.  It has been cross-compiled
 to provide native Windows executables and packaged as a binary Python
 extension (available via "pip install MontagePy").
 
-The distribution contains all libraries needed to build the toolkit
+The source distribution contains all libraries needed to build the toolkit
 from a single simple "make" command, including CFITSIO and the WCS
 library (which has been extended to support HEALPix and World-Wide
 Telescope TOAST projections. The toolkit is in wide use in astronomy
