@@ -10,15 +10,6 @@ and can be used from within Jupyter notebooks.  Most of the notebooks shown here
 of a single Montage function but there are a couple that illustrate end-to-end Montage processing.
 
 
-<center>
-<figure>
-<img src="m51c_medium.jpg" alt="M51 mosaic" style="width:400px">
-<figcaption><i>Full-color mosaic of M51 using SDSS archive images with catalog and image overlays.</i></figcaption>
-</figure> 
-</center>
-&nbsp;
-<p/>
-
 The Montage source distribution is available through GitHub at
 <a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a>
 but you don't need this if you are just running the Python version of Montage.
