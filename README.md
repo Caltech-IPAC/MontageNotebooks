@@ -1,6 +1,48 @@
 Montage Notebooks: Jupyter notebooks illustrating the use of the Python version of Montage
 ==========================================================================================
 
+Montage is a general astronomical image toolkit with facilities for reprojection, background matching, mosaicking and 
+visualization. It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and 
+OS X) and as Python binary extension modules.  These use cases are all covered by the Jupyter notebooks.
+
+All of the core Montage functionality is available through a Python binary extension ("<i>pip install MontagePy</i>") 
+and can be used from within Jupyter notebooks.  Most of the notebooks shown here are focused on illustrating the use
+of a single Montage function but there are a couple that illustrate end-to-end Montage processing.
+
+
+<center>
+<figure>
+<img src="m51c_medium.jpg" alt="M51 mosaic" style="width:400px">
+<figcaption><i>Full-color mosaic of M51 using SDSS archive images with catalog and image overlays.</i></figcaption>
+</figure> 
+</center>
+&nbsp;
+<p/>
+
+The Montage source distribution is available through GitHub at
+<a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a>
+but you don't need this if you are just running the Python version of Montage.
+
+This document set (notebooks and HTML pages) is a available through GitHub at
+<a href="https://github.com/Caltech-IPAC/MontageNotebooks">https://github.com/Caltech-IPAC/MontageNotebooks</a>.</p>
+If you just want to view the notebook pages without downloading, go to 
+<a href="http://montage.ipac.caltech.edu/MontageNotebooks">
+http://montage.ipac.caltech.edu/MontageNotebooks</a>
+
+
+The data needed to actually run the notebooks comes in two files.
+
+<a href="http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz">
+http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz</a> (3 GByte uncompressed)
+has the data for the datacube examples (because of the third dimension,
+datacubes tend to be large files).  If you are not interested in datacubes
+you can save time and space by not downloading this file.
+
+<a href="http://montage.ipac.caltech.edu/data/montage_data.tar.gz">
+http://montage.ipac.caltech.edu/data/montage_data.tar.gz</a> (1 GByte uncompressed)
+has the data for all the other notebooks.
+
+Both of these tarballs should be taken apart in the same directories as the
 Montage (http://montage.ipac.caltech.edu) is an Open Source toolkit,
 distributed with a BSD 3-clause license, for assembling Flexible
 Image Transport System (FITS) images into mosaics according to
