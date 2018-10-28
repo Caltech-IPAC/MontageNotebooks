@@ -15,10 +15,10 @@ The Montage source distribution is available through GitHub at
 but you don't need this if you are just running the Python version of Montage.
 
 This document set (notebooks and HTML pages) is a available through GitHub at
-<a href="https://github.com/Caltech-IPAC/MontageNotebooks">https://github.com/Caltech-IPAC/MontageNotebooks</a>.</p>
+<a href="https://github.com/Caltech-IPAC/MontageNotebooks">https://github.com/Caltech-IPAC/MontageNotebooks</a>.
 If you just want to view the notebook pages without downloading, go to 
 <a href="http://montage.ipac.caltech.edu/MontageNotebooks">
-http://montage.ipac.caltech.edu/MontageNotebooks</a>
+http://montage.ipac.caltech.edu/MontageNotebooks</a>.
 
 
 The data needed to actually run the notebooks comes in two files.
@@ -31,7 +31,7 @@ you can save time and space by not downloading this file.
 
 <a href="http://montage.ipac.caltech.edu/data/montage_data.tar.gz">
 http://montage.ipac.caltech.edu/data/montage_data.tar.gz</a> (1 GByte uncompressed)
-has the data for all the other notebooks.
+has the data for all the other notebooks.<p/>
 
 Both of these tarballs should be taken apart in the same directories as the
 Montage (http://montage.ipac.caltech.edu) is an Open Source toolkit,
