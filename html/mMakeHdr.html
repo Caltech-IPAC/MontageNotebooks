@@ -12059,10 +12059,12 @@ END
 /*                                                                       */
 /*  mMakeHdr                                                             */
 /*                                                                       */
-/*  Read through a table of image metadata and find the 'best' header    */
-/*  for a mosaic of the set of images.                                   */
+/*  Create the best header 'bounding' a table or set of tables (each     */
+/*  with image metadata or point sources).                               */
 /*                                                                       */
-/*   char  *tblfile        Input image metadata table                    */
+/*   char  *tblfile        Input image metadata table or source table    */
+/*                         or table of tables                            */
+/*                                                                       */
 /*   char  *template       Output image header template                  */
 /*                                                                       */
 /*   char  *csys           Coordinate system (e.g. 'EquJ', 'Galactic').  */
