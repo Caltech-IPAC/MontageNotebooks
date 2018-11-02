@@ -11776,9 +11776,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font style="font-size:96px; font-weight:bolder; color:#0040a0"><img src="http://montage.ipac.caltech.edu/docs/M51_logo.png" alt="M" style="float: left; padding: 25px 30px 25px 0px;" /></font></p>
-<p><i><b>Montage</b> is a general astronomical image toolkit with facilities for reprojection, background matching, coaddition and visualization.  It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</i></p>
-<p><i>Montage source code can be downloaded from GitHub ( https://github.com/Caltech-IPAC/Montage ).  The Python package can be installed from PyPI ("pip install MontagePy"). See
-http://montage.ipac.caltech.edu/ for more information.</i></p>
+<p><i><b>Montage</b> Montage is an astronomical image toolkit with components for reprojection, background matching, coaddition and visualization of FITS files. It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</p>
+<p>The Montage source is written in ANSI-C and code can be downloaded from GitHub ( <a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a> ). The Python package can be installed from PyPI ("&lt;/i&gt;pip install MontagePy<i>"). The package has no external dependencies. See <a href="http://montage.ipac.caltech.edu/">http://montage.ipac.caltech.edu/</a> for details on the design and applications of Montage.</p>
 
 </div>
 </div>
@@ -12016,15 +12015,35 @@ mFixNaN(...)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mFixNaN</span><span class="p">(</span>
-    
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mFixNaN</span><span class="p">(</span><span class="s2">&quot;M17/raw/unknown.fits&quot;</span><span class="p">,</span> 
+              <span class="s2">&quot;work/M17/2mass-atlas-990502s-j1430080_fixnan.fits&quot;</span><span class="p">,</span> 
+              <span class="kc">True</span><span class="p">,</span> <span class="mf">190.</span><span class="p">,</span>
+              <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mf">50.</span><span class="p">,</span> <span class="mf">210.</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">],</span> <span class="p">[</span><span class="mf">51.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">])</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">rtn</span><span class="p">)</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;status&#39;: &#39;1&#39;, &#39;msg&#39;: b&#39;File M17/raw/unknown.fits not found.&#39;}
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 

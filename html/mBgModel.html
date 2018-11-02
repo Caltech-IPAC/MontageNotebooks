@@ -11776,9 +11776,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font style="font-size:96px; font-weight:bolder; color:#0040a0"><img src="http://montage.ipac.caltech.edu/docs/M51_logo.png" alt="M" style="float: left; padding: 25px 30px 25px 0px;" /></font></p>
-<p><i><b>Montage</b> is a general astronomical image toolkit with facilities for reprojection, background matching, coaddition and visualization.  It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</i></p>
-<p><i>Montage source code can be downloaded from GitHub ( https://github.com/Caltech-IPAC/Montage ).  The Python package can be installed from PyPI ("pip install MontagePy"). See
-http://montage.ipac.caltech.edu/ for more information.</i></p>
+<p><i><b>Montage</b> Montage is an astronomical image toolkit with components for reprojection, background matching, coaddition and visualization of FITS files. It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</p>
+<p>The Montage source is written in ANSI-C and code can be downloaded from GitHub ( <a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a> ). The Python package can be installed from PyPI ("&lt;/i&gt;pip install MontagePy<i>"). The package has no external dependencies. See <a href="http://montage.ipac.caltech.edu/">http://montage.ipac.caltech.edu/</a> for details on the design and applications of Montage.</p>
 
 </div>
 </div>
@@ -11787,9 +11786,8 @@ http://montage.ipac.caltech.edu/ for more information.</i></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="MontagePy.main-modules:-mBgModel">MontagePy.main modules: mBgModel<a class="anchor-link" href="#MontagePy.main-modules:-mBgModel">&#182;</a></h1><p>A large percentage of the Montage modules focus on processing a set of images (often retrieved from a mission archive); projecting them to a common frame, adjusting their background levels as a set, and coadding them into a mosaic.</p>
-<p>This page is focused on the details of one of these modules: mBgModel.  For a broader context, please see <a href="Mosaic.ipynb">Building a Mosaic with Montage</a> or the <a href="Mosaic_oneshot.ipynb"> one shot </a> version if you just want to see the commands.</p>
-<p><b>Note:</b> The MontagePy python package has no external dependencies. We include other utilities on this page to aid in visualizing MontagePy package results.</p>
+<h1 id="MontagePy.main-modules:-mBgModel">MontagePy.main modules: mBgModel<a class="anchor-link" href="#MontagePy.main-modules:-mBgModel">&#182;</a></h1><p>The Montage modules are generally used as steps in a workflow to create a mosaic of a set of input images.  These steps are: determine the geometry of the mosaic on the sky, reproject the images to a common frame and spatial sampling; rectify the backgrounds to a common level, and coadd the images into a mosaic.  This page illustrates the use of one Montage module, mBgModel, which is used to model the set of background corrections needed for a set of images.</p>
+<p>Visit <a href="Mosaic.ipynb">Building a Mosaic with Montage</a> to see how mBgModel is used as part of a workflow to creage a mosaic (or the <a href="Mosaic_oneshot.ipynb"> one shot </a> version if you just want to see the commands).  See the complete list of Montage Notebooks <a href="http://montage.ipac.caltech.edu/MontageNotebooks">here</a>.</p>
 
 </div>
 </div>

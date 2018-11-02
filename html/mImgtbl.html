@@ -11776,9 +11776,8 @@ div#notebook {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><font style="font-size:96px; font-weight:bolder; color:#0040a0"><img src="http://montage.ipac.caltech.edu/docs/M51_logo.png" alt="M" style="float: left; padding: 25px 30px 25px 0px;" /></font></p>
-<p><i><b>Montage</b> is a general astronomical image toolkit with facilities for reprojection, background matching, mosaicking and visualization.  It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</i></p>
-<p><i>Montage source code can be downloaded from GitHub ( https://github.com/Caltech-IPAC/Montage ).  The Python package can be installed from PyPI ("pip install MontagePy"). See
-http://montage.ipac.caltech.edu/ for more information.</i></p>
+<p><i><b>Montage</b> Montage is an astronomical image toolkit with components for reprojection, background matching, coaddition and visualization of FITS files. It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and OS X) and as Python binary extension modules.</p>
+<p>The Montage source is written in ANSI-C and code can be downloaded from GitHub ( <a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a> ). The Python package can be installed from PyPI ("&lt;/i&gt;pip install MontagePy<i>"). The package has no external dependencies. See <a href="http://montage.ipac.caltech.edu/">http://montage.ipac.caltech.edu/</a> for details on the design and applications of Montage.</p>
 
 </div>
 </div>
@@ -11787,10 +11786,9 @@ http://montage.ipac.caltech.edu/ for more information.</i></p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="MontagePy.main-modules:-mImgtbl">MontagePy.main modules: mImgtbl<a class="anchor-link" href="#MontagePy.main-modules:-mImgtbl">&#182;</a></h1><p>A large percentage of the Montage modules focus on processing a set of images (often retrieved from a mission archive); projecting them to a common frame, adjusting their background levels as a set, and coadding them into a mosaic.</p>
-<p>This page is focused on the details of one of these modules: mImgtbl.  For a broader context, please see <a href="Mosaic.ipynb">Building a Mosaic with Montage</a> or the <a href="Mosaic_oneshot.ipynb"> one shot </a> version if you just want to see the commands.</p>
-<p><b>Note:</b> The MontagePy python package has no external dependencies. We include packages like AstroPy on this page to aid in visualizing MontagePy package results.</p>
-<h2 id="mImgtbl-Python-Help">mImgtbl Python Help<a class="anchor-link" href="#mImgtbl-Python-Help">&#182;</a></h2>
+<h1 id="MontagePy.main-modules:-mImgtbl">MontagePy.main modules: mImgtbl<a class="anchor-link" href="#MontagePy.main-modules:-mImgtbl">&#182;</a></h1><p>The Montage modules are generally used as steps in a workflow to create a mosaic of a set of input images.  These steps are: determine the geometry of the mosaic on the sky, reproject the images to a common frame and spatial sampling; rectify the backgrounds to a common level, and coadd the images into a mosaic.  This page illustrates the use of one Montage module, mImgtbl, which is used to generate an image metadata summary for a set of images.</p>
+<p>Visit <a href="Mosaic.ipynb">Building a Mosaic with Montage</a> to see how mImgtbl is used as part of a workflow to creage a mosaic (or the <a href="Mosaic_oneshot.ipynb"> one shot </a> version if you just want to see the commands).  See the complete list of Montage Notebooks <a href="http://montage.ipac.caltech.edu/MontageNotebooks">here</a>.</p>
+
 </div>
 </div>
 </div>
@@ -11887,14 +11885,7 @@ mImgtbl(...)
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-
-<span class="k">try</span><span class="p">:</span>
-   <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;work/M17&#39;</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-   <span class="k">pass</span>
-
-<span class="n">rtn</span> <span class="o">=</span> <span class="n">mImgtbl</span><span class="p">(</span><span class="s1">&#39;M17/raw&#39;</span><span class="p">,</span> <span class="s1">&#39;work/M17/rimages.tbl&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mImgtbl</span><span class="p">(</span><span class="s1">&#39;M17/raw&#39;</span><span class="p">,</span> <span class="s1">&#39;work/M17/rimages.tbl&#39;</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">rtn</span><span class="p">)</span>
 </pre></div>
@@ -11913,7 +11904,7 @@ mImgtbl(...)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;status&#39;: &#39;0&#39;, &#39;count&#39;: 85, &#39;badfits&#39;: 0, &#39;badwcs&#39;: 0}
+<pre>{&#39;status&#39;: &#39;0&#39;, &#39;count&#39;: 49, &#39;badfits&#39;: 0, &#39;badwcs&#39;: 0}
 </pre>
 </div>
 </div>
@@ -12007,54 +11998,6 @@ mImgtbl(...)
     <tr>
       <th>0</th>
       <td>0.0</td>
-      <td>202.196310</td>
-      <td>47.652307</td>
-      <td>13h 28m 47.11s</td>
-      <td>+47d 39m 08.3s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.509894</td>
-      <td>202.302380</td>
-      <td>47.794616</td>
-      <td>202.090260</td>
-      <td>47.794623</td>
-      <td>202.090817</td>
-      <td>47.509901</td>
-      <td>1488935.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0220256.fits</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1.0</td>
-      <td>202.031441</td>
-      <td>47.326861</td>
-      <td>13h 28m 07.55s</td>
-      <td>+47d 19m 36.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.184471</td>
-      <td>202.136786</td>
-      <td>47.469193</td>
-      <td>201.925983</td>
-      <td>47.469155</td>
-      <td>201.926662</td>
-      <td>47.184432</td>
-      <td>1493193.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0210033.fits</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2.0</td>
       <td>274.875039</td>
       <td>-15.764042</td>
       <td>18h 19m 30.01s</td>
@@ -12077,8 +12020,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1340174.fits</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>3.0</td>
+      <th>1</th>
+      <td>1.0</td>
       <td>275.752732</td>
       <td>-16.516501</td>
       <td>18h 23m 00.66s</td>
@@ -12101,8 +12044,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1470068.fits</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>4.0</td>
+      <th>2</th>
+      <td>2.0</td>
       <td>275.123042</td>
       <td>-15.765737</td>
       <td>18h 20m 29.53s</td>
@@ -12125,8 +12068,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1420174.fits</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>5.0</td>
+      <th>3</th>
+      <td>3.0</td>
       <td>275.370753</td>
       <td>-16.034853</td>
       <td>18h 21m 28.98s</td>
@@ -12149,8 +12092,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1440186.fits</td>
     </tr>
     <tr>
-      <th>6</th>
-      <td>6.0</td>
+      <th>4</th>
+      <td>4.0</td>
       <td>275.246697</td>
       <td>-15.709735</td>
       <td>18h 20m 59.21s</td>
@@ -12173,8 +12116,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1430103.fits</td>
     </tr>
     <tr>
-      <th>7</th>
-      <td>7.0</td>
+      <th>5</th>
+      <td>5.0</td>
       <td>274.998829</td>
       <td>-15.708226</td>
       <td>18h 19m 59.72s</td>
@@ -12197,32 +12140,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1350103.fits</td>
     </tr>
     <tr>
-      <th>8</th>
-      <td>8.0</td>
-      <td>202.031547</td>
-      <td>47.057416</td>
-      <td>13h 28m 07.57s</td>
-      <td>+47d 03m 26.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.915026</td>
-      <td>202.136356</td>
-      <td>47.199749</td>
-      <td>201.926626</td>
-      <td>47.199711</td>
-      <td>201.927296</td>
-      <td>46.914988</td>
-      <td>1492659.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0210044.fits</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>9.0</td>
+      <th>6</th>
+      <td>6.0</td>
       <td>274.628266</td>
       <td>-16.304900</td>
       <td>18h 18m 30.78s</td>
@@ -12245,8 +12164,8 @@ mImgtbl(...)
       <td>2mass-atlas-001012s-j0140198.fits</td>
     </tr>
     <tr>
-      <th>10</th>
-      <td>10.0</td>
+      <th>7</th>
+      <td>7.0</td>
       <td>274.627507</td>
       <td>-16.033815</td>
       <td>18h 18m 30.60s</td>
@@ -12269,8 +12188,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1320186.fits</td>
     </tr>
     <tr>
-      <th>11</th>
-      <td>11.0</td>
+      <th>8</th>
+      <td>8.0</td>
       <td>274.628258</td>
       <td>-16.574344</td>
       <td>18h 18m 30.78s</td>
@@ -12293,8 +12212,8 @@ mImgtbl(...)
       <td>2mass-atlas-001012s-j0140209.fits</td>
     </tr>
     <tr>
-      <th>12</th>
-      <td>12.0</td>
+      <th>9</th>
+      <td>9.0</td>
       <td>275.246740</td>
       <td>-15.979179</td>
       <td>18h 20m 59.22s</td>
@@ -12317,32 +12236,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1430092.fits</td>
     </tr>
     <tr>
-      <th>13</th>
-      <td>13.0</td>
-      <td>202.196253</td>
-      <td>46.843974</td>
-      <td>13h 28m 47.10s</td>
-      <td>+46d 50m 38.3s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.701562</td>
-      <td>202.300709</td>
-      <td>46.986285</td>
-      <td>202.091817</td>
-      <td>46.986291</td>
-      <td>202.092350</td>
-      <td>46.701569</td>
-      <td>1488847.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0220220.fits</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>14.0</td>
+      <th>10</th>
+      <td>10.0</td>
       <td>275.494688</td>
       <td>-16.786829</td>
       <td>18h 21m 58.73s</td>
@@ -12365,8 +12260,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1450056.fits</td>
     </tr>
     <tr>
-      <th>15</th>
-      <td>15.0</td>
+      <th>11</th>
+      <td>11.0</td>
       <td>275.628368</td>
       <td>-16.572576</td>
       <td>18h 22m 30.81s</td>
@@ -12389,8 +12284,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1460209.fits</td>
     </tr>
     <tr>
-      <th>16</th>
-      <td>16.0</td>
+      <th>12</th>
+      <td>12.0</td>
       <td>275.628331</td>
       <td>-16.303131</td>
       <td>18h 22m 30.80s</td>
@@ -12413,56 +12308,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1460198.fits</td>
     </tr>
     <tr>
-      <th>17</th>
-      <td>17.0</td>
-      <td>202.361464</td>
-      <td>47.595782</td>
-      <td>13h 29m 26.75s</td>
-      <td>+47d 35m 44.8s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.453347</td>
-      <td>202.467486</td>
-      <td>47.738069</td>
-      <td>202.255597</td>
-      <td>47.738121</td>
-      <td>202.256018</td>
-      <td>47.453398</td>
-      <td>1490167.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0230021.fits</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>18.0</td>
-      <td>201.862741</td>
-      <td>47.055392</td>
-      <td>13h 27m 27.06s</td>
-      <td>+47d 03m 19.4s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.913001</td>
-      <td>201.967551</td>
-      <td>47.197724</td>
-      <td>201.757828</td>
-      <td>47.197688</td>
-      <td>201.758490</td>
-      <td>46.912966</td>
-      <td>1570935.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000204n-j0790044.fits</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>19.0</td>
+      <th>13</th>
+      <td>13.0</td>
       <td>274.998865</td>
       <td>-15.977670</td>
       <td>18h 19m 59.73s</td>
@@ -12485,32 +12332,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1350092.fits</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>20.0</td>
-      <td>201.863019</td>
-      <td>47.596349</td>
-      <td>13h 27m 27.12s</td>
-      <td>+47d 35m 46.9s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.453946</td>
-      <td>201.968947</td>
-      <td>47.738668</td>
-      <td>201.757055</td>
-      <td>47.738656</td>
-      <td>201.757666</td>
-      <td>47.453933</td>
-      <td>1584227.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000205n-j1040021.fits</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>21.0</td>
+      <th>14</th>
+      <td>14.0</td>
       <td>274.751230</td>
       <td>-16.785979</td>
       <td>18h 19m 00.30s</td>
@@ -12533,104 +12356,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1330056.fits</td>
     </tr>
     <tr>
-      <th>22</th>
-      <td>22.0</td>
-      <td>201.863121</td>
-      <td>46.788016</td>
-      <td>13h 27m 27.15s</td>
-      <td>+46d 47m 16.9s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.645614</td>
-      <td>201.967440</td>
-      <td>46.930336</td>
-      <td>201.758767</td>
-      <td>46.930324</td>
-      <td>201.759352</td>
-      <td>46.645602</td>
-      <td>1586095.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000205n-j1040056.fits</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>23.0</td>
-      <td>201.862643</td>
-      <td>47.324837</td>
-      <td>13h 27m 27.03s</td>
-      <td>+47d 19m 29.4s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.182445</td>
-      <td>201.967988</td>
-      <td>47.467168</td>
-      <td>201.757193</td>
-      <td>47.467132</td>
-      <td>201.757864</td>
-      <td>47.182410</td>
-      <td>1569785.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000204n-j0790033.fits</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>24.0</td>
-      <td>202.361034</td>
-      <td>46.787449</td>
-      <td>13h 29m 26.65s</td>
-      <td>+46d 47m 14.8s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.645015</td>
-      <td>202.465444</td>
-      <td>46.929737</td>
-      <td>202.256773</td>
-      <td>46.929789</td>
-      <td>202.257174</td>
-      <td>46.645066</td>
-      <td>1486835.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0230056.fits</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>25.0</td>
-      <td>202.521621</td>
-      <td>46.843609</td>
-      <td>13h 30m 05.19s</td>
-      <td>+46d 50m 37.0s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.701205</td>
-      <td>202.626054</td>
-      <td>46.985927</td>
-      <td>202.417164</td>
-      <td>46.985919</td>
-      <td>202.417739</td>
-      <td>46.701197</td>
-      <td>1487257.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0240220.fits</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>26.0</td>
+      <th>15</th>
+      <td>15.0</td>
       <td>275.494606</td>
       <td>-15.978495</td>
       <td>18h 21m 58.71s</td>
@@ -12653,8 +12380,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1450092.fits</td>
     </tr>
     <tr>
-      <th>27</th>
-      <td>27.0</td>
+      <th>16</th>
+      <td>16.0</td>
       <td>275.246870</td>
       <td>-16.787513</td>
       <td>18h 20m 59.25s</td>
@@ -12677,176 +12404,392 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1430056.fits</td>
     </tr>
     <tr>
-      <th>28</th>
-      <td>28.0</td>
-      <td>202.846852</td>
-      <td>47.381255</td>
-      <td>13h 31m 23.24s</td>
-      <td>+47d 22m 52.5s</td>
+      <th>17</th>
+      <td>17.0</td>
+      <td>274.751105</td>
+      <td>-15.977645</td>
+      <td>18h 19m 00.27s</td>
+      <td>-15d 58m 39.5s</td>
       <td>512.0</td>
       <td>1024.0</td>
       <td>RA---SIN</td>
       <td>DEC--SIN</td>
       <td>256.5</td>
       <td>...</td>
-      <td>47.238864</td>
-      <td>202.952307</td>
-      <td>47.523587</td>
-      <td>202.741285</td>
-      <td>47.523549</td>
-      <td>202.741965</td>
-      <td>47.238827</td>
-      <td>1488896.0</td>
+      <td>-16.119983</td>
+      <td>274.825144</td>
+      <td>-15.835261</td>
+      <td>274.677023</td>
+      <td>-15.835282</td>
+      <td>274.676961</td>
+      <td>-16.120004</td>
+      <td>1656061.0</td>
       <td>0.0</td>
-      <td>2mass-atlas-980527n-j0260244.fits</td>
+      <td>2mass-atlas-990502s-j1330092.fits</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>18.0</td>
+      <td>274.998975</td>
+      <td>-16.786004</td>
+      <td>18h 19m 59.75s</td>
+      <td>-16d 47m 09.6s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.928342</td>
+      <td>275.073321</td>
+      <td>-16.643620</td>
+      <td>274.924590</td>
+      <td>-16.643638</td>
+      <td>274.924517</td>
+      <td>-16.928361</td>
+      <td>1581598.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1350056.fits</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>19.0</td>
+      <td>274.627497</td>
+      <td>-15.764371</td>
+      <td>18h 18m 30.60s</td>
+      <td>-15d 45m 51.7s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-15.906717</td>
+      <td>274.701475</td>
+      <td>-15.621994</td>
+      <td>274.553509</td>
+      <td>-15.621999</td>
+      <td>274.553415</td>
+      <td>-15.906722</td>
+      <td>1642365.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1320174.fits</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>20.0</td>
+      <td>275.752701</td>
+      <td>-16.247057</td>
+      <td>18h 23m 00.65s</td>
+      <td>-16d 14m 49.4s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.389397</td>
+      <td>275.826845</td>
+      <td>-16.104675</td>
+      <td>275.678524</td>
+      <td>-16.104691</td>
+      <td>275.678450</td>
+      <td>-16.389413</td>
+      <td>1650435.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1470080.fits</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>21.0</td>
+      <td>275.370728</td>
+      <td>-15.765409</td>
+      <td>18h 21m 28.97s</td>
+      <td>-15d 45m 55.5s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-15.907751</td>
+      <td>275.444698</td>
+      <td>-15.623028</td>
+      <td>275.296731</td>
+      <td>-15.623041</td>
+      <td>275.296654</td>
+      <td>-15.907764</td>
+      <td>1656387.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1440174.fits</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>22.0</td>
+      <td>275.123077</td>
+      <td>-16.035181</td>
+      <td>18h 20m 29.54s</td>
+      <td>-16d 02m 06.7s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.177521</td>
+      <td>275.197140</td>
+      <td>-15.892798</td>
+      <td>275.048977</td>
+      <td>-15.892816</td>
+      <td>275.048907</td>
+      <td>-16.177538</td>
+      <td>1621035.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1420186.fits</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>23.0</td>
+      <td>275.494578</td>
+      <td>-15.709051</td>
+      <td>18h 21m 58.70s</td>
+      <td>-15d 42m 32.6s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-15.851393</td>
+      <td>275.568527</td>
+      <td>-15.566670</td>
+      <td>275.420601</td>
+      <td>-15.566684</td>
+      <td>275.420526</td>
+      <td>-15.851407</td>
+      <td>1654852.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1450103.fits</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>24.0</td>
+      <td>274.751064</td>
+      <td>-15.708201</td>
+      <td>18h 19m 00.26s</td>
+      <td>-15d 42m 29.5s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-15.850539</td>
+      <td>274.825005</td>
+      <td>-15.565817</td>
+      <td>274.677079</td>
+      <td>-15.565838</td>
+      <td>274.677019</td>
+      <td>-15.850560</td>
+      <td>1616957.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1330103.fits</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>25.0</td>
+      <td>274.875062</td>
+      <td>-16.033486</td>
+      <td>18h 19m 30.01s</td>
+      <td>-16d 02m 00.5s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.175829</td>
+      <td>274.949131</td>
+      <td>-15.891106</td>
+      <td>274.800969</td>
+      <td>-15.891118</td>
+      <td>274.800887</td>
+      <td>-16.175840</td>
+      <td>1633635.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1340186.fits</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>26.0</td>
+      <td>275.752764</td>
+      <td>-16.785946</td>
+      <td>18h 23m 00.66s</td>
+      <td>-16d 47m 09.4s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.928286</td>
+      <td>275.827113</td>
+      <td>-16.643563</td>
+      <td>275.678382</td>
+      <td>-16.643579</td>
+      <td>275.678304</td>
+      <td>-16.928302</td>
+      <td>1638810.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1470056.fits</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>27.0</td>
+      <td>274.628275</td>
+      <td>-16.035455</td>
+      <td>18h 18m 30.79s</td>
+      <td>-16d 02m 07.6s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.177806</td>
+      <td>274.702361</td>
+      <td>-15.893083</td>
+      <td>274.554197</td>
+      <td>-15.893079</td>
+      <td>274.554082</td>
+      <td>-16.177802</td>
+      <td>1659317.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-001012s-j0140186.fits</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>28.0</td>
+      <td>274.627527</td>
+      <td>-16.572704</td>
+      <td>18h 18m 30.61s</td>
+      <td>-16d 34m 21.7s</td>
+      <td>512.0</td>
+      <td>1024.0</td>
+      <td>RA---SIN</td>
+      <td>DEC--SIN</td>
+      <td>256.5</td>
+      <td>...</td>
+      <td>-16.715049</td>
+      <td>274.701805</td>
+      <td>-16.430327</td>
+      <td>274.553238</td>
+      <td>-16.430332</td>
+      <td>274.553139</td>
+      <td>-16.715055</td>
+      <td>1562618.0</td>
+      <td>0.0</td>
+      <td>2mass-atlas-990502s-j1320209.fits</td>
     </tr>
     <tr>
       <th>29</th>
       <td>29.0</td>
-      <td>202.685396</td>
-      <td>47.595460</td>
-      <td>13h 30m 44.50s</td>
-      <td>+47d 35m 43.7s</td>
+      <td>274.627517</td>
+      <td>-16.303259</td>
+      <td>18h 18m 30.60s</td>
+      <td>-16d 18m 11.7s</td>
       <td>512.0</td>
       <td>1024.0</td>
       <td>RA---SIN</td>
       <td>DEC--SIN</td>
       <td>256.5</td>
       <td>...</td>
-      <td>47.453059</td>
-      <td>202.791316</td>
-      <td>47.737781</td>
-      <td>202.579428</td>
-      <td>47.737765</td>
-      <td>202.580051</td>
-      <td>47.453043</td>
-      <td>1489526.0</td>
+      <td>-16.445605</td>
+      <td>274.701693</td>
+      <td>-16.160883</td>
+      <td>274.553330</td>
+      <td>-16.160888</td>
+      <td>274.553233</td>
+      <td>-16.445610</td>
+      <td>1592556.0</td>
       <td>0.0</td>
-      <td>2mass-atlas-980527n-j0250021.fits</td>
+      <td>2mass-atlas-990502s-j1320198.fits</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>55.0</td>
-      <td>201.862544</td>
-      <td>47.594281</td>
-      <td>13h 27m 27.01s</td>
-      <td>+47d 35m 39.4s</td>
+      <th>30</th>
+      <td>30.0</td>
+      <td>275.370805</td>
+      <td>-16.573742</td>
+      <td>18h 21m 28.99s</td>
+      <td>-16d 34m 25.5s</td>
       <td>512.0</td>
       <td>1024.0</td>
       <td>RA---SIN</td>
       <td>DEC--SIN</td>
       <td>256.5</td>
       <td>...</td>
-      <td>47.451889</td>
-      <td>201.968433</td>
-      <td>47.736612</td>
-      <td>201.756549</td>
-      <td>47.736576</td>
-      <td>201.757230</td>
-      <td>47.451854</td>
-      <td>1578963.0</td>
+      <td>-16.716083</td>
+      <td>275.445075</td>
+      <td>-16.431361</td>
+      <td>275.296508</td>
+      <td>-16.431374</td>
+      <td>275.296425</td>
+      <td>-16.716097</td>
+      <td>1604130.0</td>
       <td>0.0</td>
-      <td>2mass-atlas-000204n-j0790021.fits</td>
+      <td>2mass-atlas-990502s-j1440209.fits</td>
     </tr>
     <tr>
-      <th>56</th>
-      <td>56.0</td>
-      <td>202.361176</td>
-      <td>47.056893</td>
-      <td>13h 29m 26.68s</td>
-      <td>+47d 03m 24.8s</td>
+      <th>31</th>
+      <td>31.0</td>
+      <td>275.370779</td>
+      <td>-16.304298</td>
+      <td>18h 21m 28.99s</td>
+      <td>-16d 18m 15.5s</td>
       <td>512.0</td>
       <td>1024.0</td>
       <td>RA---SIN</td>
       <td>DEC--SIN</td>
       <td>256.5</td>
       <td>...</td>
-      <td>46.914459</td>
-      <td>202.466115</td>
-      <td>47.199181</td>
-      <td>202.256387</td>
-      <td>47.199233</td>
-      <td>202.256795</td>
-      <td>46.914510</td>
-      <td>1503122.0</td>
+      <td>-16.446639</td>
+      <td>275.444947</td>
+      <td>-16.161917</td>
+      <td>275.296584</td>
+      <td>-16.161930</td>
+      <td>275.296503</td>
+      <td>-16.446652</td>
+      <td>1644389.0</td>
       <td>0.0</td>
-      <td>2mass-atlas-980527n-j0230044.fits</td>
+      <td>2mass-atlas-990502s-j1440198.fits</td>
     </tr>
     <tr>
-      <th>57</th>
-      <td>57.0</td>
-      <td>202.361319</td>
-      <td>47.326338</td>
-      <td>13h 29m 26.72s</td>
-      <td>+47d 19m 34.8s</td>
+      <th>32</th>
+      <td>32.0</td>
+      <td>275.628294</td>
+      <td>-16.033687</td>
+      <td>18h 22m 30.79s</td>
+      <td>-16d 02m 01.3s</td>
       <td>512.0</td>
       <td>1024.0</td>
       <td>RA---SIN</td>
       <td>DEC--SIN</td>
       <td>256.5</td>
       <td>...</td>
-      <td>47.183903</td>
-      <td>202.466796</td>
-      <td>47.468625</td>
-      <td>202.255995</td>
-      <td>47.468677</td>
-      <td>202.256409</td>
-      <td>47.183954</td>
-      <td>1504088.0</td>
+      <td>-16.176026</td>
+      <td>275.702356</td>
+      <td>-15.891304</td>
+      <td>275.554194</td>
+      <td>-15.891322</td>
+      <td>275.554127</td>
+      <td>-16.176045</td>
+      <td>1656210.0</td>
       <td>0.0</td>
-      <td>2mass-atlas-980527n-j0230033.fits</td>
+      <td>2mass-atlas-990502s-j1460186.fits</td>
     </tr>
     <tr>
-      <th>58</th>
-      <td>58.0</td>
-      <td>201.862839</td>
-      <td>46.785948</td>
-      <td>13h 27m 27.08s</td>
-      <td>+46d 47m 09.4s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.643557</td>
-      <td>201.967120</td>
-      <td>46.928280</td>
-      <td>201.758455</td>
-      <td>46.928244</td>
-      <td>201.759108</td>
-      <td>46.643522</td>
-      <td>1587191.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000204n-j0790056.fits</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>59.0</td>
+      <th>33</th>
+      <td>33.0</td>
       <td>275.494661</td>
       <td>-16.517384</td>
       <td>18h 21m 58.72s</td>
@@ -12869,32 +12812,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1450068.fits</td>
     </tr>
     <tr>
-      <th>60</th>
-      <td>60.0</td>
-      <td>201.863054</td>
-      <td>47.326905</td>
-      <td>13h 27m 27.13s</td>
-      <td>+47d 19m 36.9s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.184502</td>
-      <td>201.968437</td>
-      <td>47.469224</td>
-      <td>201.757634</td>
-      <td>47.469212</td>
-      <td>201.758237</td>
-      <td>47.184489</td>
-      <td>1583350.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-000205n-j1040033.fits</td>
-    </tr>
-    <tr>
-      <th>61</th>
-      <td>61.0</td>
+      <th>34</th>
+      <td>34.0</td>
       <td>274.998902</td>
       <td>-16.247115</td>
       <td>18h 19m 59.74s</td>
@@ -12917,8 +12836,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1350080.fits</td>
     </tr>
     <tr>
-      <th>62</th>
-      <td>62.0</td>
+      <th>35</th>
+      <td>35.0</td>
       <td>274.751188</td>
       <td>-16.516534</td>
       <td>18h 19m 00.29s</td>
@@ -12941,32 +12860,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1330068.fits</td>
     </tr>
     <tr>
-      <th>63</th>
-      <td>63.0</td>
-      <td>202.196272</td>
-      <td>47.113419</td>
-      <td>13h 28m 47.11s</td>
-      <td>+47d 06m 48.3s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.971006</td>
-      <td>202.301258</td>
-      <td>47.255729</td>
-      <td>202.091306</td>
-      <td>47.255735</td>
-      <td>202.091846</td>
-      <td>46.971013</td>
-      <td>1487946.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0220232.fits</td>
-    </tr>
-    <tr>
-      <th>64</th>
-      <td>64.0</td>
+      <th>36</th>
+      <td>36.0</td>
       <td>275.246783</td>
       <td>-16.248624</td>
       <td>18h 20m 59.23s</td>
@@ -12989,8 +12884,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1430080.fits</td>
     </tr>
     <tr>
-      <th>65</th>
-      <td>65.0</td>
+      <th>37</th>
+      <td>37.0</td>
       <td>275.752638</td>
       <td>-15.708168</td>
       <td>18h 23m 00.63s</td>
@@ -13013,80 +12908,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1470103.fits</td>
     </tr>
     <tr>
-      <th>66</th>
-      <td>66.0</td>
-      <td>202.685486</td>
-      <td>47.056571</td>
-      <td>13h 30m 44.52s</td>
-      <td>+47d 03m 23.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.914171</td>
-      <td>202.790326</td>
-      <td>47.198893</td>
-      <td>202.580599</td>
-      <td>47.198877</td>
-      <td>202.581205</td>
-      <td>46.914155</td>
-      <td>1488050.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0250044.fits</td>
-    </tr>
-    <tr>
-      <th>67</th>
-      <td>67.0</td>
-      <td>202.685442</td>
-      <td>47.326016</td>
-      <td>13h 30m 44.51s</td>
-      <td>+47d 19m 33.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.183615</td>
-      <td>202.790818</td>
-      <td>47.468337</td>
-      <td>202.580018</td>
-      <td>47.468321</td>
-      <td>202.580632</td>
-      <td>47.183599</td>
-      <td>1486856.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0250033.fits</td>
-    </tr>
-    <tr>
-      <th>68</th>
-      <td>68.0</td>
-      <td>202.846746</td>
-      <td>47.650699</td>
-      <td>13h 31m 23.22s</td>
-      <td>+47d 39m 02.5s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.508308</td>
-      <td>202.952746</td>
-      <td>47.793031</td>
-      <td>202.740633</td>
-      <td>47.792993</td>
-      <td>202.741322</td>
-      <td>47.508271</td>
-      <td>1489977.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0260256.fits</td>
-    </tr>
-    <tr>
-      <th>69</th>
-      <td>69.0</td>
+      <th>38</th>
+      <td>38.0</td>
       <td>275.246826</td>
       <td>-16.518068</td>
       <td>18h 20m 59.24s</td>
@@ -13109,8 +12932,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1430068.fits</td>
     </tr>
     <tr>
-      <th>70</th>
-      <td>70.0</td>
+      <th>39</th>
+      <td>39.0</td>
       <td>274.751147</td>
       <td>-16.247090</td>
       <td>18h 19m 00.28s</td>
@@ -13133,8 +12956,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1330080.fits</td>
     </tr>
     <tr>
-      <th>71</th>
-      <td>71.0</td>
+      <th>40</th>
+      <td>40.0</td>
       <td>274.998938</td>
       <td>-16.516559</td>
       <td>18h 19m 59.75s</td>
@@ -13157,8 +12980,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1350068.fits</td>
     </tr>
     <tr>
-      <th>72</th>
-      <td>72.0</td>
+      <th>41</th>
+      <td>41.0</td>
       <td>275.494633</td>
       <td>-16.247940</td>
       <td>18h 21m 58.71s</td>
@@ -13181,32 +13004,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1450080.fits</td>
     </tr>
     <tr>
-      <th>73</th>
-      <td>73.0</td>
-      <td>202.521598</td>
-      <td>47.113054</td>
-      <td>13h 30m 05.18s</td>
-      <td>+47d 06m 47.0s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.970649</td>
-      <td>202.626562</td>
-      <td>47.255371</td>
-      <td>202.416611</td>
-      <td>47.255363</td>
-      <td>202.417195</td>
-      <td>46.970641</td>
-      <td>1522920.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0240232.fits</td>
-    </tr>
-    <tr>
-      <th>74</th>
-      <td>74.0</td>
+      <th>42</th>
+      <td>42.0</td>
       <td>275.628258</td>
       <td>-15.764243</td>
       <td>18h 22m 30.78s</td>
@@ -13229,32 +13028,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1460174.fits</td>
     </tr>
     <tr>
-      <th>75</th>
-      <td>75.0</td>
-      <td>203.011230</td>
-      <td>46.786035</td>
-      <td>13h 32m 02.70s</td>
-      <td>+46d 47m 09.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.643634</td>
-      <td>203.115539</td>
-      <td>46.928357</td>
-      <td>202.906874</td>
-      <td>46.928341</td>
-      <td>202.907471</td>
-      <td>46.643618</td>
-      <td>1489320.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0270056.fits</td>
-    </tr>
-    <tr>
-      <th>76</th>
-      <td>76.0</td>
+      <th>43</th>
+      <td>43.0</td>
       <td>274.628283</td>
       <td>-15.766011</td>
       <td>18h 18m 30.79s</td>
@@ -13277,8 +13052,8 @@ mImgtbl(...)
       <td>2mass-atlas-001012s-j0140174.fits</td>
     </tr>
     <tr>
-      <th>77</th>
-      <td>77.0</td>
+      <th>44</th>
+      <td>44.0</td>
       <td>275.752669</td>
       <td>-15.977612</td>
       <td>18h 23m 00.64s</td>
@@ -13301,32 +13076,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1470092.fits</td>
     </tr>
     <tr>
-      <th>78</th>
-      <td>78.0</td>
-      <td>202.847060</td>
-      <td>46.842366</td>
-      <td>13h 31m 23.29s</td>
-      <td>+46d 50m 32.5s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>46.699976</td>
-      <td>202.951448</td>
-      <td>46.984699</td>
-      <td>202.742563</td>
-      <td>46.984661</td>
-      <td>202.743224</td>
-      <td>46.699939</td>
-      <td>1488799.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0260220.fits</td>
-    </tr>
-    <tr>
-      <th>79</th>
-      <td>79.0</td>
+      <th>45</th>
+      <td>45.0</td>
       <td>274.875085</td>
       <td>-16.302930</td>
       <td>18h 19m 30.02s</td>
@@ -13349,8 +13100,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1340198.fits</td>
     </tr>
     <tr>
-      <th>80</th>
-      <td>80.0</td>
+      <th>46</th>
+      <td>46.0</td>
       <td>274.875108</td>
       <td>-16.572375</td>
       <td>18h 19m 30.03s</td>
@@ -13373,8 +13124,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1340209.fits</td>
     </tr>
     <tr>
-      <th>81</th>
-      <td>81.0</td>
+      <th>47</th>
+      <td>47.0</td>
       <td>275.123111</td>
       <td>-16.304626</td>
       <td>18h 20m 29.55s</td>
@@ -13397,56 +13148,8 @@ mImgtbl(...)
       <td>2mass-atlas-990502s-j1420198.fits</td>
     </tr>
     <tr>
-      <th>82</th>
-      <td>82.0</td>
-      <td>203.011094</td>
-      <td>47.594368</td>
-      <td>13h 32m 02.66s</td>
-      <td>+47d 35m 39.7s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.451967</td>
-      <td>203.117012</td>
-      <td>47.736689</td>
-      <td>202.905128</td>
-      <td>47.736672</td>
-      <td>202.905751</td>
-      <td>47.451950</td>
-      <td>1489069.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0270021.fits</td>
-    </tr>
-    <tr>
-      <th>83</th>
-      <td>83.0</td>
-      <td>202.521576</td>
-      <td>47.382498</td>
-      <td>13h 30m 05.18s</td>
-      <td>+47d 22m 57.0s</td>
-      <td>512.0</td>
-      <td>1024.0</td>
-      <td>RA---SIN</td>
-      <td>DEC--SIN</td>
-      <td>256.5</td>
-      <td>...</td>
-      <td>47.240093</td>
-      <td>202.627077</td>
-      <td>47.524815</td>
-      <td>202.416051</td>
-      <td>47.524807</td>
-      <td>202.416643</td>
-      <td>47.240085</td>
-      <td>1501931.0</td>
-      <td>0.0</td>
-      <td>2mass-atlas-980527n-j0240244.fits</td>
-    </tr>
-    <tr>
-      <th>84</th>
-      <td>84.0</td>
+      <th>48</th>
+      <td>48.0</td>
       <td>275.123145</td>
       <td>-16.574070</td>
       <td>18h 20m 29.55s</td>
@@ -13470,7 +13173,7 @@ mImgtbl(...)
     </tr>
   </tbody>
 </table>
-<p>85 rows × 37 columns</p>
+<p>49 rows × 37 columns</p>
 </div>
 </div>
 
@@ -13492,7 +13195,7 @@ mImgtbl(...)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mImgtbl</span><span class="p">(</span><span class="s1">&#39;M17/unknown&#39;</span><span class="p">,</span> <span class="s1">&#39;work/M17/rimages.tbl&#39;</span><span class="p">)</span>
