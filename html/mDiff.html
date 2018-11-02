@@ -11794,7 +11794,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">MontagePy.main</span> <span class="k">import</span> <span class="n">mDiff</span><span class="p">,</span> <span class="n">mViewer</span>
@@ -11870,8 +11870,8 @@ mDiff(...)
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="mDiff-Example">mDiff Example<a class="anchor-link" href="#mDiff-Example">&#182;</a></h2><p>Here, two Spitzer Space Telescope IRAC images have been tranformed to a common projection (using mProject).  They have similar but not identical sky coverage and originally had slightly different rotations.</p>
 <div style="width: 820px">
-<img src="input/IRAC/projected/SPITZER_I2_5504000_0000_6_E8758134_maic.png" width="400" style="float: left;"/>
-<img src="input/IRAC/projected/SPITZER_I2_5504256_0000_6_E8757228_maic.png" width="400" style="float: right;"/>
+<img src="IRAC/projected/SPITZER_I2_5504000_0000_6_E8758134_maic.png" width="400" style="float: left;"/>
+<img src="IRAC/projected/SPITZER_I2_5504256_0000_6_E8757228_maic.png" width="400" style="float: right;"/>
 </div><p>mDiff gives us the difference image of the above two.  In Montage, this difference is primarily used to determine background offsets by fitting the difference with a plane.  Below we stretch the difference to show the noise level and illustrate any residual effects of sky structure.  Most noticeble are the bright stars in the lower left and the brightest areas in the galaxies, particularly the center of M51b. However, these are not much brighter than the noise and instrumental data collection effects, so fitting the difference with a plane (mFitplane) gives an reasonable measure of the image background difference, especially if the larger excursions from the plane are excluded in the fit.</p>
 <p/>
 </div>
@@ -11879,7 +11879,7 @@ mDiff(...)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mDiff</span><span class="p">(</span><span class="s1">&#39;IRAC/projected/hdu0_SPITZER_I2_5504000_0000_6_E8758134_maic.fits&#39;</span><span class="p">,</span> 
@@ -11904,7 +11904,7 @@ mDiff(...)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;status&#39;: &#39;0&#39;, &#39;time&#39;: 0.0, &#39;min_pixel&#39;: -0.33841609954833984, &#39;max_pixel&#39;: 269.2658386230469, &#39;min_diff&#39;: 1.4901161193847656e-08, &#39;max_diff&#39;: 142.27021026611328}
+<pre>{&#39;status&#39;: &#39;0&#39;, &#39;time&#39;: 1.0, &#39;min_pixel&#39;: -0.33841609954833984, &#39;max_pixel&#39;: 269.2658386230469, &#39;min_diff&#39;: 1.4901161193847656e-08, &#39;max_diff&#39;: 142.27021026611328}
 </pre>
 </div>
 </div>
@@ -11925,7 +11925,7 @@ The difference image looks like this:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -11947,7 +11947,7 @@ The difference image looks like this:</p>
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[6]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11977,7 +11977,7 @@ The difference image looks like this:</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mDiff</span><span class="p">(</span><span class="s1">&#39;IRAC/projected/unknown.fits&#39;</span><span class="p">,</span> 
