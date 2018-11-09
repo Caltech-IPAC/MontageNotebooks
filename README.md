@@ -81,4 +81,4 @@ Technologies Project, under Cooperative Agreement Number NCC5-626
 between NASA and the California Institute of Technology. The Montage
 distribution includes an adaptation of the MOPEX algorithm developed
 at the Spitzer Science Center. Montage is now funded by the National
-Science Foundation under Award Number NSF ACI-1440620.
+Science Foundation under Grant Numbers NSF ACI-1440620 and ACI-1642453.
