@@ -15,12 +15,11 @@
 
       .column {
          float: left;
-         width: 50%;
-         padding: 50px;
+         padding: 15px;
       }
 
       table {
-         width: 500px;
+         width: 465px;
       }
 
       table, th, td {
@@ -61,92 +60,113 @@
 </head>
 
 <body>
+<div style="border: 0px solid red; width:1100px;">
 <div class="row">
 
-<div class="column">
-<h1>Montage Jupyter Notebooks</h1>
+<div class="column" style="width: 600px;">
+&nbsp;<p/>
+&nbsp;<p/>
+<center><font size="+4" style="color: #0000c0;"><b>Montage Jupyter Notebooks</b></font></center>
+&nbsp;<p/>
 
-<p> 
-Montage is a general astronomical image toolkit with facilities for reprojection, background matching, mosaicking and 
-visualization. It can be used as a set of command-line tools (Linux, OS X and Windows), C library calls (Linux and 
-OS X) and as Python binary extension modules.  These use cases are all covered by the Jupyter notebooks.
-</p>
+<p>Thirty-seven modules in Version 6.0 are accessible as Python binary extension ("<i>pip install MontagePy</i>")
+and can be used from within Jupyter notebooks. The notebooks available here show the use of each Montage
+function, and there are in addition two that illustrate end-to-end processing to create mosaics.</p>
 
-<p>
-All of the core Montage functionality is available through a Python binary extension ("<i>pip install MontagePy</i>") 
-and can be used from within Jupyter notebooks.  Most of the notebooks shown here are focused on illustrating the use
-of a single Montage function but there are a couple that illustrate end-to-end Montage processing.
-</p>
+&nbsp;<p/>
 
 <p><center>
 <figure>
-<img src="m51c_medium.jpg" alt="M51 mosaic" style="width:400px">
-<figcaption><i>Full-color mosaic of M51 using SDSS archive images with catalog and image overlays.</i></figcaption>
+<a href="SDSS.png"><img src="SDSS.png" alt="SDSS M51 mosaic" style="width:400px">
+<figcaption><i>Three-color mosaic of M51 of SDSS u, g and r archive images,<br/>
+               with catalog and image overlays, created with mViewer.<br/>
+               The mViewer notebook shows how to create this image.<br>
+               (click for a better view)</i></a></figcaption>
+
 </figure> 
 </center></p>
 &nbsp;
 <p/>
 
-<p>The Montage source distribution is available through GitHub at
-<a href="https://github.com/Caltech-IPAC/Montage">https://github.com/Caltech-IPAC/Montage</a>
-but you don't need this if you are just running the Python version of Montage.</p>
+<p>This document set (notebooks and HTML pages) is a available through GitHub at</p>
 
-<p>This document set (notebooks and HTML pages) is a available through GitHub at
-<a href="https://github.com/Caltech-IPAC/MontageNotebooks">https://github.com/Caltech-IPAC/MontageNotebooks</a>.</p>
-If you just want to view the notebook pages without downloading, go to 
-<a href="http://montage.ipac.caltech.edu/MontageNotebooks">
-http://montage.ipac.caltech.edu/MontageNotebooks</a>
+<p><tt>      <a href="https://github.com/Caltech-IPAC/MontageNotebooks">https://github.com/Caltech-IPAC/MontageNotebooks</a></tt></p>
+
+<p>If you just want to view the notebook pages without downloading, go to</p>
+
+<p><tt>      <a href="http://montage.ipac.caltech.edu/MontageNotebooks"> http://montage.ipac.caltech.edu/MontageNotebooks</a></tt></p>
 
 
-<p>The data needed to actually run the notebooks comes in two files.</p>
+<p>The data needed to actually run the notebooks comes in two files:</p>
 
-<p><a href="http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz">
-http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz</a> (3 GByte uncompressed)
-has the data for the datacube examples (because of the third dimension,
-datacubes tend to be large files).  If you are not interested in datacubes
-you can save time and space by not downloading this file.</p>
+<p><tt>      <a href="http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz"> http://montage.ipac.caltech.edu/data/montage_datacubes.tar.gz</a><br/>
+      <a href="http://montage.ipac.caltech.edu/data/montage_data.tar.gz"> http://montage.ipac.caltech.edu/data/montage_data.tar.gz</a></tt></p>
 
-<p><a href="http://montage.ipac.caltech.edu/data/montage_data.tar.gz">
-http://montage.ipac.caltech.edu/data/montage_data.tar.gz</a> (1 GByte uncompressed)
-has the data for all the other notebooks.</p>
+
+<p>The first is 3 GByte uncompressed and contains the data for the datacube examples 
+(because of the third dimension, datacubes tend to be large files).  If you are not 
+interested in datacubes you can save time and space by not downloading this file.  
+The second is 1 GByte uncompressed and has the data for all the other notebooks.</p>
 
 <p>Both of these tarballs should be taken apart in the same directories as the
 downloaded notebook .ipynb files.</p>
+
+&nbsp;<p/>
+&nbsp;<p/>
+<center>
+<table>
+<tr><th colspan="2"> Visualization </th></tr>
+
+<tr><td><a href="mViewer.html" target="montageDocs">        mViewer       </a></td><td>
+General FITS image viewer (single or multi-band, with overlays).
+</td></tr>
+
+<tr><td><a href="mHistogram.html" target="montageDocs">     mHistogram    </a></td><td>
+Generate a histogram for an image, suitable for use in the 
+Viewer.</td></tr>
+
+
+<tr><th colspan="2"> End-to-End Processing Tutorials </th></tr>
+
+<tr><td><a href="Mosaic.html" target="montageDocs">         Mosaic        </a></td><td>
+Overview example of the end-to-end process of making a 
+mosaic of archive data.
+</td></tr>
+
+<tr><td><a href="Mosaic_oneshot.html" target="montageDocs"> Mosaic_oneshot</a></td><td>
+The above example without the explanatory text.
+</td></tr>
+
+</table>
+<center>
 </div>
 
 <div class="column" style="background-color:#ffffff;">
 <center>
 <table>
-<tr><th> Function </th><th> Description </th></tr>
+<tr><th colspan="2"> Creating and Managing Header Files </th></tr>
 
 <tr><td><a href="mHdr.html" target="montageDocs">           mHdr          </a></td><td>
 Create a template FITS header (TAN projection) from just a location and size.
 </td></tr>
 
-<tr><td><a href="mArchiveList.html" target="montageDocs">   mArchiveList  </a></td><td>
-Query remote archives for list of downloadable images.
+<tr><td><a href="mGetHdr.html" target="montageDocs">        mGetHdr       </a></td><td>
+Pull the header from a FITS file (in a form suitable for 
+any text editor.
 </td></tr>
 
-<tr><td><a href="mCoverageCheck.html" target="montageDocs"> mCoverageCheck</a></td><td>
-Reduce list of images to just those overlapping a region.
+<tr><td><a href="mGetHdr.html" target="montageDocs">        mPutHdr       </a></td><td>
+Replace the header for a FITS file using an template text
+header file.
 </td></tr>
 
-<tr><td><a href="mArchiveExec.html" target="montageDocs">   mArchiveExec  </a></td><td>
-Retrieve a list of remote archive images (using mArchiveGet).
-</td></tr>
+<tr><td><a href="mMakeHdr.html" target="montageDocs">       mMakeHdr      </a></td><td>
+Make a template FITS header as a bounding box around a table of
+sky locations (or image metadata).
+</tr>
 
-<tr><td><a href="mArchiveGet.html" target="montageDocs">    mArchiveGet   </a></td><td>
-Retrieve a single archive image.
-</td></tr>
 
-<tr><td><a href="mImgtbl.html" target="montageDocs">        mImgtbl       </a></td><td>
-Generate a metadata table (with an emphasis on sky coverage) for a set of images
-(usually a single subdirectory but can run recursively).
-</td></tr>
-
-<tr><td><a href="mProjExec.html" target="montageDocs">      mProjExec     </a></td><td>
-Reproject a set of images to a common projection/coordinate system.
-</td></tr>
+<tr><th colspan="2"> Reprojecting, Co-registering, and Coadding Two-Dimensional Images </th></tr>
 
 <tr><td><a href="mProject.html" target="montageDocs">       mProject      </a></td><td>
 Reproject a single image to another projection/coordinate system (any projection,
@@ -162,8 +182,33 @@ projections only, flux conserving).
 Reproject a single image to another projection/coordinate system (any projection,
 not strictly flux conserving).</td></tr>
 
+<tr><td><a href="mTANHdr.html" target="montageDocs">        mTANHdr       </a></td><td>
+Create a TAN projection with focal-plane distortions (for better reprojection performance)
+for small-area images with odd projections.
+</td></tr>
+
+<tr><td><a href="mProjExec.html" target="montageDocs">      mProjExec     </a></td><td>
+Reproject a set of images to a common projection/coordinate system.
+</td></tr>
+
+<tr><td><a href="mAdd.html" target="montageDocs">           mAdd          </a></td><td>
+Coadd a set of images with the same projection together into a
+mosaic.
+</td></tr>
+
+
+<tr><th colspan="2"> Background Fitting and Rectification </th></tr>
+
 <tr><td><a href="mOverlaps.html" target="montageDocs">      mOverlaps     </a></td><td>
 Determine the set of overlaps for a set of images.
+</td></tr>
+
+<tr><td><a href="mDiff.html" target="montageDocs">          mDiff         </a></td><td>
+Generate the difference between two images.
+</td></tr>
+
+<tr><td><a href="mFitplane.html" target="montageDocs">      mFitplane     </a></td><td>
+Fit a plane to a single image (ignoring larger flux excursions).
 </td></tr>
 
 <tr><td><a href="mDiffExec.html" target="montageDocs">      mDiffExec     </a></td><td>
@@ -179,18 +224,14 @@ Determine plane fits to a list of image pairs (take each image, then
 fit it and clean as you go).
 </td></tr>
 
-<tr><td><a href="mDiff.html" target="montageDocs">          mDiff         </a></td><td>
-Generate the difference between two images.
-</td></tr>
-
-<tr><td><a href="mFitplane.html" target="montageDocs">      mFitplane     </a></td><td>
-Fit a plane to a single image (ignoring larger flux excursions).
-</td></tr>
-
 <tr><td><a href="mBgModel.html" target="montageDocs">       mBgModel      </a></td><td>
 Model a set of image overlap differences to determine the best 
 background to remove from the original image to make backgrounds
 match.
+</td></tr>
+
+<tr><td><a href="mBackground.html" target="montageDocs">    mBackground   </a></td><td>
+Subtract a plane from a single image.
 </td></tr>
 
 <tr><td><a href="mBgExec.html" target="montageDocs">        mBgExec       </a></td><td>
@@ -198,26 +239,8 @@ Subtract planes from a set of images, usually to get the backgrounds
 to match.
 </td></tr>
 
-<tr><td><a href="mBackground.html" target="montageDocs">    mBackground   </a></td><td>
-Subtract a plane from a single image.
-</td></tr>
 
-<tr><td><a href="mAdd.html" target="montageDocs">           mAdd          </a></td><td>
-Coadd a set of images with the same projection together into a
-mosaic.
-</td></tr>
-
-<tr><td class="spacer" target="montageDocs">&nbsp;</td><td class="spacer">&nbsp;</td></tr>
-
-<tr><td><a href="mGetHdr.html" target="montageDocs">        mGetHdr       </a></td><td>
-Pull the header from a FITS file (in a form suitable for 
-any text editor.
-</td></tr>
-
-<tr><td><a href="mGetHdr.html" target="montageDocs">        mPutHdr       </a></td><td>
-Replace the header for a FITS file using an template text
-header file.
-</td></tr>
+<tr><th colspan="2"> Image Utilities </th></tr>
 
 <tr><td><a href="mBestImage.html" target="montageDocs">     mBestImage    </a></td><td>
 Find the "best" image from a set for a specific location.
@@ -238,12 +261,6 @@ Create an artificial FITS image based on source catalog
 data and/or simple backgrounds.
 </td></tr>
 
-<tr><td><a href="mTANHdr.html" target="montageDocs">        mTANHdr       </a></td><td>
-Many small-area images in odd projections can be accuratedly 
-represented by a TAN projection with focal-plane distortions
-(thereby allowing faster reprojection).
-</td></tr>
-
 <tr><td><a href="mShrink.html" target="montageDocs">        mShrink       </a></td><td>
 Shrink (or expand) an image by an arbitrary factor.
 </td></tr>
@@ -252,22 +269,32 @@ Shrink (or expand) an image by an arbitrary factor.
 Cut a rectangular area out of an image file.
 </td></tr>
 
-<tr><td><a href="mMakeHdr.html" target="montageDocs">       mMakeHdr      </a></td><td>
-Make a template FITS header as a bounding box around a table of
-sky locations (or image metadata).
-</tr>
 
-<tr><td class="spacer" target="montageDocs">&nbsp;</td><td class="spacer">&nbsp;</td></tr>
+<tr><th colspan="2"> Finding and Retrieving Images </th></tr>
 
-<tr><td><a href="mViewer.html" target="montageDocs">        mViewer       </a></td><td>
-General FITS image viewer (single or multi-band, with overlays).
+<tr><td><a href="mArchiveList.html" target="montageDocs">   mArchiveList  </a></td><td>
+Query remote archives for list of downloadable images.
 </td></tr>
 
-<tr><td><a href="mHistogram.html" target="montageDocs">     mHistogram    </a></td><td>
-Generate a histogram for an image, suitable for use in the 
-Viewer.</td></tr>
+<tr><td><a href="mCoverageCheck.html" target="montageDocs"> mCoverageCheck</a></td><td>
+Reduce list of images to just those overlapping a region.
+</td></tr>
 
-<tr><td class="spacer" target="montageDocs">&nbsp;</td><td class="spacer">&nbsp;</td></tr>
+<tr><td><a href="mArchiveGet.html" target="montageDocs">    mArchiveGet   </a></td><td>
+Retrieve a single archive image.
+</td></tr>
+
+<tr><td><a href="mArchiveExec.html" target="montageDocs">   mArchiveExec  </a></td><td>
+Retrieve a list of remote archive images (using mArchiveGet).
+</td></tr>
+
+<tr><td><a href="mImgtbl.html" target="montageDocs">        mImgtbl       </a></td><td>
+Generate a metadata table (with an emphasis on sky coverage) for a set of images
+(usually a single subdirectory but can run recursively).
+</td></tr>
+
+
+<tr><th colspan="2"> Creating and Managing Mosaics of Data Cubes </th></tr>
 
 <tr><td><a href="mProjectCube.html" target="montageDocs">   mProjectCube  </a></td><td>
 Reproject a datacube.  Spatial (sky) coordinates should be the
@@ -291,20 +318,9 @@ Cut a subcube out of a datacube.
 Transpose the axes of a datacube, usually to get the spatial
 dimensions into the right order for reprojection.
 </td></tr>
-
-<tr><td class="spacer" target="montageDocs">&nbsp;</td><td class="spacer">&nbsp;</td></tr>
-
-<tr><td><a href="Mosaic.html" target="montageDocs">         Mosaic        </a></td><td>
-Overview example of the end-to-end process of making a 
-mosaic of archive data.
-</td></tr>
-
-<tr><td><a href="Mosaic_oneshot.html" target="montageDocs"> Mosaic_oneshot</a></td><td>
-The above example without the explanatory text.
-</td></tr>
-
 </table>
 </center>
+</div>
 </div>
 </div>
 
