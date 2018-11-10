@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">MontagePy.main</span> <span class="k">import</span> <span class="n">mTranspose</span><span class="p">,</span> <span class="n">mViewer</span>
@@ -11874,7 +11874,7 @@ mTranspose(...)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">rtn</span> <span class="o">=</span> <span class="n">mTranspose</span><span class="p">(</span><span class="s1">&#39;GALFA/shrunken/GALFA_HI_RA+DEC_012.00+10.35_N.fits&#39;</span><span class="p">,</span>
@@ -11897,7 +11897,7 @@ mTranspose(...)
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>{&#39;status&#39;: &#39;0&#39;, &#39;mindata&#39;: -0.46863989818240004, &#39;maxdata&#39;: 45.00281993688704}
+<pre>{&#39;status&#39;: &#39;0&#39;, &#39;mindata&#39;: -1.0, &#39;maxdata&#39;: 45.0}
 </pre>
 </div>
 </div>
@@ -11917,7 +11917,7 @@ mTranspose(...)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
@@ -11939,7 +11939,7 @@ mTranspose(...)
 
 <div class="output_area">
 
-<div class="prompt output_prompt">Out[4]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -11971,9 +11971,11 @@ mTranspose(...)
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">mViewer</span><span class="p">(</span><span class="s1">&#39;-nowcs </span><span class="se">\</span>
-<span class="s1">         -ct 4 -gray &quot;work/GALFA/GALFA_transpose.fits[10][20]&quot; </span><span class="se">\</span>
+<span class="s1">         -ct 4 -gray &quot;work/GALFA/GALFA_transpose.fits[0][256]&quot; </span><span class="se">\</span>
 <span class="s1">         -2s max gaussian-log -out work/GALFA/GALFA_transpose.png&#39;</span><span class="p">,</span>
         <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rtn</span><span class="p">)</span>
 
 <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;work/GALFA/GALFA_transpose.png&#39;</span><span class="p">)</span>
 </pre></div>
@@ -11991,45 +11993,25 @@ mTranspose(...)
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-5-f93ef6bb3c34&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span>         &#39;&#39;, 2)
-<span class="ansi-green-intense-fg ansi-bold">      3</span> 
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>Image<span class="ansi-blue-fg">(</span>filename<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;work/GALFA/GALFA_transpose.png&#39;</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/IPython/core/display.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, data, url, filename, format, embed, width, height, retina, unconfined, metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1149</span>         self<span class="ansi-blue-fg">.</span>unconfined <span class="ansi-blue-fg">=</span> unconfined
-<span class="ansi-green-intense-fg ansi-bold">   1150</span>         super(Image, self).__init__(data=data, url=url, filename=filename, 
-<span class="ansi-green-fg">-&gt; 1151</span><span class="ansi-red-fg">                 metadata=metadata)
-</span><span class="ansi-green-intense-fg ansi-bold">   1152</span> 
-<span class="ansi-green-intense-fg ansi-bold">   1153</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>width <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">None</span> <span class="ansi-green-fg">and</span> self<span class="ansi-blue-fg">.</span>metadata<span class="ansi-blue-fg">.</span>get<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;width&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/IPython/core/display.py</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-fg">(self, data, url, filename, metadata)</span>
-<span class="ansi-green-intense-fg ansi-bold">    607</span>             self<span class="ansi-blue-fg">.</span>metadata <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">}</span>
-<span class="ansi-green-intense-fg ansi-bold">    608</span> 
-<span class="ansi-green-fg">--&gt; 609</span><span class="ansi-red-fg">         </span>self<span class="ansi-blue-fg">.</span>reload<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    610</span>         self<span class="ansi-blue-fg">.</span>_check_data<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    611</span> 
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/IPython/core/display.py</span> in <span class="ansi-cyan-fg">reload</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1180</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Reload the raw data from file or URL.&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">   1181</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>embed<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">-&gt; 1182</span><span class="ansi-red-fg">             </span>super<span class="ansi-blue-fg">(</span>Image<span class="ansi-blue-fg">,</span>self<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>reload<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">   1183</span>             <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>retina<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">   1184</span>                 self<span class="ansi-blue-fg">.</span>_retina_shape<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/anaconda3/lib/python3.6/site-packages/IPython/core/display.py</span> in <span class="ansi-cyan-fg">reload</span><span class="ansi-blue-fg">(self)</span>
-<span class="ansi-green-intense-fg ansi-bold">    632</span>         <span class="ansi-blue-fg">&#34;&#34;&#34;Reload the raw data from file or URL.&#34;&#34;&#34;</span>
-<span class="ansi-green-intense-fg ansi-bold">    633</span>         <span class="ansi-green-fg">if</span> self<span class="ansi-blue-fg">.</span>filename <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">--&gt; 634</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">with</span> open<span class="ansi-blue-fg">(</span>self<span class="ansi-blue-fg">.</span>filename<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>_read_flags<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">as</span> f<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    635</span>                 self<span class="ansi-blue-fg">.</span>data <span class="ansi-blue-fg">=</span> f<span class="ansi-blue-fg">.</span>read<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">    636</span>         <span class="ansi-green-fg">elif</span> self<span class="ansi-blue-fg">.</span>url <span class="ansi-green-fg">is</span> <span class="ansi-green-fg">not</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">:</span>
-
-<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;work/GALFA/GALFA_transpose.png&#39;</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;status&#39;: &#39;0&#39;, &#39;mindata&#39;: -1.0, &#39;maxdata&#39;: 45.0}
+</pre>
 </div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[5]:</div>
+
+
+
+
+<div class="output_png output_subarea output_execute_result">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
 </div>
 
 </div>
